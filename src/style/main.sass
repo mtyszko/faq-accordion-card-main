@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap')
+
+// text colors
+$desaturated-blue: hsl(238, 29%, 16%)
+$soft-red: hsl(14, 88%, 65%)
+
+$vdark-grayish-blue: hsl(237, 12%, 33%)
+$dark-grayish-blue: hsl(240, 6%, 50%)
+
+// bg gradient colors
+$soft-violet: hsl(273, 75%, 66%)
+$soft-blue: hsl(240, 73%, 65%)
+
+// dividers color
+$lgrayish-blue: hsl(240, 5%, 91%)
+
+html
+  font-size: 12px
+  font-family: 'Kumbh Sans', sans-serif
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+*,
+*:before,
+*:after
+  margin: 0
+  padding: 0
+  -webkit-box-sizing: inherit
+  -moz-box-sizing: inherit
+  box-sizing: inherit
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+body
+  min-width: 100vw
+  min-height: 100vh
+  background: linear-gradient(to bottom,$soft-violet,$soft-blue)
+  display: flex
+  justify-content: center
+  color: $desaturated-blue
+
+.wrapper
+  align-self: center
+  width: clamp(350px,87.3333333vw,420px)
+  min-height: 536px
+  background-color: #ffffff
+  border-radius: 20px
+
+.pictures
+  position: relative
+  min-height: 106px
+  background-image: url('../images/bg-pattern-mobile.svg')
+  background-repeat: no-repeat
+  background-position: bottom 5px center
+
+.pictures__main__img__lady
+  position: absolute
+  top: -110px
+  left: 50%
+  transform: translateX(-50%)
+  width: 240px
+
+.pictures__main__img__box
+  display: none
+
+.content
+  // background-color: lightblue
+  width: clamp(200px,85.89%,350px)
+  min-height: 430px
+  margin: 0 auto
+  padding: 0 0 20px
+  font-weight: 400
+  font-size: 1.1rem
+
+.title
+  align-self: center
+  padding: 30px 0 20px
+  font-size: 2.66666rem
+  line-height: 3rem
+  font-weight: 700
+  text-align: center
+
+.content__item
+  border-bottom: 1px solid $lgrayish-blue
+
+  &:hover
+    cursor: pointer
+
+  &:hover .content__item__top
+    color: $soft-red
+
+.content__item__top
+  display: flex
+  justify-content: space-between
+  line-height: 50px
+
+.content__item__answ
+  height: 0
+  padding: 0
+  overflow: hidden
+  color: $dark-grayish-blue
+  font-size: 1rem
+  line-height: 1.6rem
+  transition: .3s
+
+.content__item____top__icon
+  transform: rotate(0)
+  transition: .3s
+
+.active .content__item__top
+  font-weight: 700
+
+.active .content__item____top__icon
+  transform: rotate(180deg)
+
+.active .content__item__answ
+  height: 56px
+
+footer
+  position: absolute
+  bottom: 10px
+  right: 10px
+  color: $lgrayish-blue
+  font-size: 9px
+
+  a
+    color: $lgrayish-blue
+    text-decoration: none
+
+    &:hover
+      color: $soft-red
+
+@media (min-width:860px)
+  .wrapper
+    display: flex
+    width: clamp(780px,87.3333333vw,920px)
+    min-height: 508px
+
+  .pictures
+    min-width: 388px
+    background-image: url('../images/bg-pattern-desktop.svg')
+    background-repeat: no-repeat
+    background-size: 250%
+    background-position: bottom -130px right
+
+  .pictures__main__img
+    width: 100%
+    height: 100%
+    background-image: url('../images/illustration-woman-online-desktop.svg')
+    background-repeat: no-repeat
+    background-position: top 45px right 5px
+
+  .pictures__main__img__lady
+    display: none
+
+  .pictures__main__img__box
+    position: absolute
+    display: block
+    top: 50%
+    left: -95px
+    transform: translate(0, -75px)
+
+  .content
+    align-self: stretch
+
+  .title
+    text-align: left
+    margin: 30px 0 0

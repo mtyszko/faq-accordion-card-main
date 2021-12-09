@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+html {
+  font-size: 12px;
+  font-family: 'Kumbh Sans', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: -webkit-linear-gradient(top, #af67e9, #6565e7);
+  background: -o-linear-gradient(top, #af67e9, #6565e7);
+  background: linear-gradient(to bottom, #af67e9, #6565e7);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #1d1e35;
+}
+
+.wrapper {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+  width: clamp(350px, 87.33333vw, 420px);
+  min-height: 536px;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.pictures {
+  position: relative;
+  min-height: 106px;
+  background-image: url("../images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 5px center;
+}
+
+.pictures__main__img__lady {
+  position: absolute;
+  top: -110px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 240px;
+}
+
+.pictures__main__img__box {
+  display: none;
+}
+
+.content {
+  width: clamp(200px, 85.89%, 350px);
+  min-height: 430px;
+  margin: 0 auto;
+  padding: 0 0 20px;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.title {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+  padding: 30px 0 20px;
+  font-size: 2.66666rem;
+  line-height: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.content__item {
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.content__item:hover {
+  cursor: pointer;
+}
+
+.content__item:hover .content__item__top {
+  color: #f47c57;
+}
+
+.content__item__top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 50px;
+}
+
+.content__item__answ {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  color: #787887;
+  font-size: 1rem;
+  line-height: 1.6rem;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.content__item____top__icon {
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.active .content__item__top {
+  font-weight: 700;
+}
+
+.active .content__item____top__icon {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.active .content__item__answ {
+  height: 56px;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #e7e7e9;
+  font-size: 9px;
+}
+
+footer a {
+  color: #e7e7e9;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #f47c57;
+}
+
+@media (min-width: 860px) {
+  .wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: clamp(780px, 87.33333vw, 920px);
+    min-height: 508px;
+  }
+  .pictures {
+    min-width: 388px;
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 250%;
+    background-position: bottom -130px right;
+  }
+  .pictures__main__img {
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/illustration-woman-online-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: top 45px right 5px;
+  }
+  .pictures__main__img__lady {
+    display: none;
+  }
+  .pictures__main__img__box {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: -95px;
+    -webkit-transform: translate(0, -75px);
+        -ms-transform: translate(0, -75px);
+            transform: translate(0, -75px);
+  }
+  .content {
+    -webkit-align-self: stretch;
+        -ms-flex-item-align: stretch;
+                -ms-grid-row-align: stretch;
+            align-self: stretch;
+  }
+  .title {
+    text-align: left;
+    margin: 30px 0 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
